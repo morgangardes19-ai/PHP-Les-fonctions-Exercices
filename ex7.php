@@ -5,11 +5,28 @@
  */
 function majorite(int $age, string $genre): string
 {
-    if ($age >= 18 && $genre === "Homme") {
-        return "Vous êtes un homme et vous êtes majeur.";
+
+    $genre = strtolower($genre);
+    // var_dump($genre);
+    $message = "Vous êtes un";
+
+    if ($genre === "homme") {
+        $message .= " homme ";
     } else {
-        return "Vous êtes un homme et vous êtes mineur.";
+        $message .= "e femme ";
     }
+
+    $message .= "et vous êtes ";
+
+    if ($age >= 18) {
+        $message .= "majeur";
+    } else {
+        $message .= "mineur";
+    }
+
+    return $message;
+
+    // return "Vous êtes un" . ($genre === 'homme' ?  " homme " : "e femme ") . "et vous êtes " . ($age >= 18 ? "majeur" : "mineur");
 }
 ?>
 
@@ -25,7 +42,7 @@ function majorite(int $age, string $genre): string
 
 <body>
     <p>
-        <?= majorite(18, "") ?>
+        <?= majorite(16, "femme") ?>
     </p>
 </body>
 
