@@ -1,13 +1,13 @@
 <?php
 
-
-function returnString(string $chaine): string
+/**
+ * Cette fonction affiche la somme de 3 nombres.
+ */
+function somme(int $nombre1, int $nombre2, int $nombre3): int
 {
-    return $chaine;
+    return $nombre1 + $nombre2 + $nombre3;
 }
-
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -19,13 +19,9 @@ function returnString(string $chaine): string
 </head>
 
 <body>
-
     <p>
-        <?= returnString("hello") ?>
+        <?= somme(6, 2, 0) ?>
     </p>
-
-
-
 </body>
 
 </html>

@@ -1,11 +1,12 @@
 <?php
 
-
-function returnString(string $chaine): string
+/**
+ * Cette fonction concatène un nombre et une chaîne de caractère.
+ */
+function concat(int $nombre, string $chaîne): string
 {
-    return $chaine;
+    return "$nombre $chaîne";
 }
-
 ?>
 
 
@@ -19,13 +20,9 @@ function returnString(string $chaine): string
 </head>
 
 <body>
-
     <p>
-        <?= returnString("hello") ?>
+        <?= concat(5, "est un nombre") ?>
     </p>
-
-
-
 </body>
 
 </html>
